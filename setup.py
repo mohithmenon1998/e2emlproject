@@ -4,7 +4,7 @@ from typing import List
 HYPHEN_E_DOT = '-e .'
 def get_requirements(file_path:str)->List[str]:
     '''
-    this func returns a list of requirements 
+    this function returns a list of requirements 
     '''
     requirements=[]
     with open(file_path) as file_obj:
@@ -23,7 +23,7 @@ setup(
     author= 'Mohith Vikraman Menon',
     author_email='mohithmenon1998@gmail.com',
     packages=find_packages(),
-    install_requires=['pandas','numpy','seaborn']
+    install_requires=get_requirements('requirements.txt')
 
 
 
